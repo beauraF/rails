@@ -1,3 +1,7 @@
+*   Add `PendingMigrationError` actionable error multi database support
+
+    *Florent Beaurain*
+
 *   Add `ActiveRecord::Relation#readonly?`.
 
     Reflects if the relation has been marked as readonly.
