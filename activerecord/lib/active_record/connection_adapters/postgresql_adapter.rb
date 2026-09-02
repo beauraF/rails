@@ -1149,6 +1149,10 @@ module ActiveRecord
             @raw_connection.set_client_encoding(@config[:encoding])
           end
 
+          if @config[:error_verbosity]
+            @raw_connection.set_error_verbosity(@config[:error_verbosity])
+          end
+
           @notice_receiver_fatal_error = nil
           @raw_connection.set_notice_receiver do |result|
             next if capture_fatal_notice(result)
